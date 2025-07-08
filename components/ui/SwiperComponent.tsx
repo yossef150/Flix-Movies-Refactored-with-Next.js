@@ -33,6 +33,7 @@ function SwiperComponent({ movies }: Props) {
                 alt={movie.title}
                 className="rounded-lg w-full h-full object-cover brightness-80"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
               />
               <h4 className="mt-2 text-white text-sm font-semibold flex items-center gap-1">
               <div className="absolute bottom-0 left-0 right-0 bg-black/60 py-2 flex items-center justify-center gap-1">

@@ -15,6 +15,7 @@ export async function fetchTMDB(endpoint: string, params?: Record<string, string
     for(const [key, value] of Object.entries(params))
       url.searchParams.append(key, String(value));
   }
+  // console.log(url);
   const res = await fetch(url);
 
   if (!res.ok) {

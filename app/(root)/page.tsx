@@ -30,7 +30,7 @@ async function Page({searchParams}: {searchParams: Promise<{query: string}>}) {
         <SearchForm query={query}/>
       </section>
       {/* Popular Movies Section */}
-      <section className="w-full py-16 bg-gray-900">
+      <section className="w-full pt-16 pb-8 bg-gray-900">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-extrabold text-white mb-10 text-center">
             Popular Movies
@@ -43,12 +43,11 @@ async function Page({searchParams}: {searchParams: Promise<{query: string}>}) {
                     title: movie.title,
                     description: movie.overview,
                     rating: reduceDecimal(movie.vote_average),
-                    imageUrl: `https://image.tmdb.org/t/p/w500${movie.poster_path}`,
+                    imageUrl: movie.poster_path?`https://image.tmdb.org/t/p/w500${movie.poster_path}`: '/images/no-image.jpg',
                   }}
                   />
                 </Link> 
                 ))}
-
           </div>
         </div>
       </section>

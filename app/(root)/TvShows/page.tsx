@@ -31,7 +31,7 @@ async function Page() {
                     title: tv.title,
                     description: tv.overview? tv.overview: 'Joe el gamed fel ICPC me2ata3 el donya we mafeesh seeny 3aref yesed m3ah',
                     rating: reduceDecimal(tv.vote_average),
-                    imageUrl: tv.poster_path?`https://image.tmdb.org/t/p/w500${tv.poster_path}`: '/images/test.jpg',
+                    imageUrl: tv.poster_path?`https://image.tmdb.org/t/p/w500${tv.poster_path}`: '/images/no-image.jpg',
                   }}
                   />
                 </Link> 
